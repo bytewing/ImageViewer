@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>viewer module &mdash; SIMPLE 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SIMPLE 1.0 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">SIMPLE 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-viewer">
+<span id="viewer-module"></span><h1>viewer module<a class="headerlink" href="#module-viewer" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="viewer.ImageViewer">
+<em class="property">class </em><tt class="descclassname">viewer.</tt><tt class="descname">ImageViewer</tt><a class="headerlink" href="#viewer.ImageViewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Sridhar Narayan</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.1 - January 2015</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Contact:</th><td class="field-body"><a class="reference external" href="mailto:narayans&#37;&#52;&#48;uncw&#46;edu">narayans<span>&#64;</span>uncw<span>&#46;</span>edu</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Organization:</th><td class="field-body">University of North Carolina Wilmington</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Summary:</th><td class="field-body">Image viewer that supports display, modification, and saving of images in jpg, gif,
+png formats. User-written image processing functions can be loaded (added) into the viewer.
+These functions are then available for use as menu options. Multiple viewers can exist
+concurrently. An image displayed in <em>one</em> viewer can be accessed and modified by code invoked
+within the context of <em>any other</em> viewer.</td>
+</tr>
+</tbody>
+</table>
+<dl class="staticmethod">
+<dt id="viewer.ImageViewer.blank_image">
+<em class="property">static </em><tt class="descname">blank_image</tt><big>(</big><em>width</em>, <em>height</em><big>)</big><a class="headerlink" href="#viewer.ImageViewer.blank_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a blank (white) image with the specified dimension</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>width</strong> &#8211; width of the desired image (like 320)</li>
+<li><strong>height</strong> &#8211; height of the desired image (like 240)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">blank (white) image with the specified dimensions</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="viewer.ImageViewer.display_image">
+<tt class="descname">display_image</tt><big>(</big><em>img</em><big>)</big><a class="headerlink" href="#viewer.ImageViewer.display_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the specified image in the referenced viewer instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>img</strong> &#8211; reference to the image to be displayed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="viewer.ImageViewer.get_height">
+<tt class="descname">get_height</tt><big>(</big><big>)</big><a class="headerlink" href="#viewer.ImageViewer.get_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the height of the image visible in the referenced viewer instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the height of the image visible in the referenced viewer instance</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="viewer.ImageViewer.get_pixel">
+<tt class="descname">get_pixel</tt><big>(</big><em>x</em>, <em>y</em><big>)</big><a class="headerlink" href="#viewer.ImageViewer.get_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a r,g,b-triple corresponding to the red,green,blue intensities of pixel at
+specified location (x,y) within the referenced viewer instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> &#8211; the x coordinate of a location in the image</li>
+<li><strong>y</strong> &#8211; the y coordinate of a location in the image</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a triple corresponding to the red, green, blue intensities of the pixel at the specified (x,y) location within the referenced viewer instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="viewer.ImageViewer.get_viewer">
+<em class="property">static </em><tt class="descname">get_viewer</tt><big>(</big><em>viewer_id=None</em><big>)</big><a class="headerlink" href="#viewer.ImageViewer.get_viewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a reference to the ImageViewer instance identified by the viewer id. If no viewer id is specified, it returns a
+reference to the current, i.e. active, ImageViewer instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>viewer_id</strong> &#8211; id of desired ImageViewer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">reference to desired ImageViewer instance</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="viewer.ImageViewer.get_width">
+<tt class="descname">get_width</tt><big>(</big><big>)</big><a class="headerlink" href="#viewer.ImageViewer.get_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the width of the image visible in the referenced viewer instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the width of the image visible in the referenced viewer instance</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="viewer.ImageViewer.set_pixel">
+<tt class="descname">set_pixel</tt><big>(</big><em>x</em>, <em>y</em>, <em>r</em>, <em>g</em>, <em>b</em><big>)</big><a class="headerlink" href="#viewer.ImageViewer.set_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>assign r,g,b values to pixel at specified location (x,y) within the referenced viewer instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> &#8211; the x coordinate of a location within the referenced viewer instance</li>
+<li><strong>y</strong> &#8211; the y coordinate of a location within the referenced viewer instance</li>
+<li><strong>r</strong> &#8211; the red intensity of that pixel (0..255)</li>
+<li><strong>g</strong> &#8211; the green intensity of that pixel (0..255)</li>
+<li><strong>b</strong> &#8211; the blue intensity of that pixel (0..255)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="viewer.ImageViewer.show_message">
+<tt class="descname">show_message</tt><big>(</big><em>message</em><big>)</big><a class="headerlink" href="#viewer.ImageViewer.show_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a user-specified message at the bottom of the viewer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>message</strong> &#8211; text of message to be displayed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/viewer.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">SIMPLE 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, 2015 Sridhar Narayan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
